@@ -4,18 +4,18 @@ void one_three(void);
 void two(void);
 
 int main(void) {
-    printf("начинаем:\n");
+    printf("РЅР°С‡РёРЅР°РµРј:\n");
     one_three();
-    printf("порядок!");
+    printf("РїРѕСЂСЏРґРѕРє!");
     return 0;
 }
 
 void one_three(void) {
-    printf("один\n");
+    printf("РѕРґРёРЅ\n");
     two();
-    printf("три\n");
+    printf("С‚СЂРё\n");
 }
 
 void two(void) {
-    printf("два\n");
+    printf("РґРІР°\n");
 }
