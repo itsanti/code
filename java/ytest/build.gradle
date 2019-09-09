@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'api.youla'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.10
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.6.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.9.9'
+}
