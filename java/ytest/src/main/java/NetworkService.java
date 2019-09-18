@@ -3,29 +3,23 @@
  * @version dated Сент. 09, 2019
  */
 
+import config.ApiConfig;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
-public class NetworkService {
-    private static NetworkService mInstance;
-    private static final String BASE_URL = "https://api.youla.io/api/v1/";
+class NetworkService {
+
     private Retrofit mRetrofit;
 
-    private NetworkService() {
+    NetworkService(ApiConfig properties) {
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(properties.getApiHost())
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();
+
     }
 
-    public static NetworkService getInstance() {
-        if (mInstance == null) {
-            mInstance = new NetworkService();
-        }
-        return mInstance;
-    }
-
-    public ProductsAPI getJSONApi() {
+    ProductsAPI getProductsAPI() {
         return mRetrofit.create(ProductsAPI.class);
     }
 }

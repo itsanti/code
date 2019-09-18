@@ -1,4 +1,4 @@
-package respjson;
+package entities;
 
 /**
  * @author Aleksandr Kurov
@@ -10,20 +10,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Products
-{
-    @JsonProperty("product")
-    private List<Product> product;
+public class Interceptor<T> {
+    @JsonProperty("data")
+    private List<T> data;
     @JsonProperty("status")
     private int status;
     @JsonProperty("detail")
     private String detail;
 
-    public void setData(List<Product> product){
-        this.product = product;
+    public void setData(List<T> data){
+        this.data = data;
     }
-    public List<Product> getData(){
-        return product;
+    public List<T> getData(){
+        return data;
     }
     public void setStatus(int status){
         this.status = status;

@@ -1,4 +1,4 @@
-package respjson;
+package entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * @author Aleksandr Kurov
@@ -15,9 +15,9 @@ public class Location
     @JsonProperty("city")
     private String city;
     @JsonProperty("city_name")
-    private String city_name;
+    private String cityName;
     @JsonProperty("show_exact_address")
-    private Boolean show_exact_address;
+    private boolean showExactAddress;
 
 
     public float getLatitude() {
@@ -52,18 +52,19 @@ public class Location
         this.city = city;
     }
 
-    public String getCity_name() {
-    return city_name;
+    public String getCityName() {
+    return cityName;
 }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
-    }
-    public Boolean getShow_exact_address() {
-        return show_exact_address;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
-    public void setShow_exact_address(Boolean show_exact_address) {
-        this.show_exact_address = show_exact_address;
+    public boolean getShowExactAddress() {
+        return showExactAddress;
+    }
+
+    public void setShowExactAddress(boolean showExactAddress) {
+        this.showExactAddress = showExactAddress;
     }
 }
