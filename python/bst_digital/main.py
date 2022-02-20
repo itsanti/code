@@ -1,3 +1,4 @@
+from lib.find_athlets import find_athlets
 from lib.find_top_20 import find_top_20
 from lib.get_inductees import get_inductees
 
@@ -14,3 +15,8 @@ if __name__ == '__main__':
     birthday_years = [1962, 1995, 2000, None, None, None, None, 1998, 2001]
     genders = ["Male", "Female", "Male", "Female", "Male", None, None, None, None]
     print('task 2:', get_inductees(names, birthday_years, genders))
+
+    know_english = ["Vasya", "Jimmy", "Max", "Peter", "Eric", "Zoi", "Felix"]
+    sportsmen = ["Don", "Peter", "Eric", "Jimmy", "Mark"]
+    more_than_20_years = ["Peter", "Julie", "Jimmy", "Mark", "Max"]
+    print('task 3:', find_athlets(know_english, sportsmen, more_than_20_years))
