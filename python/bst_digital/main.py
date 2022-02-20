@@ -1,6 +1,7 @@
 from lib.find_athlets import find_athlets
 from lib.find_top_20 import find_top_20
 from lib.get_inductees import get_inductees
+from lib.make_report_about_top3 import make_report_about_top3
 
 if __name__ == '__main__':
     candidates = [
@@ -20,3 +21,10 @@ if __name__ == '__main__':
     sportsmen = ["Don", "Peter", "Eric", "Jimmy", "Mark"]
     more_than_20_years = ["Peter", "Julie", "Jimmy", "Mark", "Max"]
     print('task 3:', find_athlets(know_english, sportsmen, more_than_20_years))
+
+    students_avg_scores = {
+        'Max': 4.964, 'Eric': 4.962, 'Peter': 4.923,
+        'Mark': 4.957, 'Julie': 4.95, 'Jimmy': 4.973,
+        'Felix': 4.937, 'Vasya': 4.911, 'Don': 4.936, 'Zoi': 4.937
+    }
+    print('task 4:', make_report_about_top3(students_avg_scores))
